@@ -33,33 +33,25 @@ public class Task0707 {
         else{
             int height = max(a,b,c);
             System.out.println(height);
-            int x = height - a, y = height - b, z = height - c;
 
-            for (int j = height; j > 0; j--){
-                String line = "";
-                if (x > 0) {
-                    line += " ";
-                    x -= 1;
-                }
+            for (int i = 0; i < height; i++){
+                if (a <= height - i - 1)
+                    System.out.print(" ");
                 else
-                    line += "*";
+                    System.out.print("*");
 
-                if (y > 0) {
-                    line += " ";
-                    y -= 1;
-                }
+                if (b <= height - i - 1)
+                    System.out.print(" ");
                 else
-                    line += "*";
+                    System.out.print("*");
 
-                if (z > 0) {
-                    line += " ";
-                    z -= 1;
-                }
+                if (c <= height - i - 1)
+                    System.out.print(" ");
                 else
-                    line += "*";
+                    System.out.print("*");
 
 
-                System.out.println(line);
+                System.out.println();
             }
 
         }

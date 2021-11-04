@@ -3,23 +3,24 @@ import java.util.Scanner;
 public class Task0708 {
 
     public static boolean inSum(int a, int b, int c, int d, int n){
-        if ((n >= a && n <= b) || (n >= c && c <= d))
+        if ((n >= a && n <= b) || (n >= c && n <= d))
             return true;
         else
             return false;
     }
 
     public static boolean inIntersect(int a, int b, int c, int d, int n){
-        if (n >= )
+        if ((n >= a && n <= b) && (n >= c && c <= d))
             return true;
         else
             return false;
     }
 
     public static boolean inSymDiff(int a, int b, int c, int d, int n){
-        boolean result = false;
-
-        return result;
+        if (((n >= a && n <= b) && !(n >= c && c <= d)) || (!(n >= a && n <= b) && (n >= c && n <= d)))
+            return true;
+        else
+            return false;
     }
 
     public static void main (String[] args){
@@ -34,10 +35,17 @@ public class Task0708 {
         c = sc.nextInt();
         System.out.print("d = ");
         d = sc.nextInt();
+        sc.close();
 
         for (int n = -5; n <= 5; n++){
             System.out.printf("%2d",n);
-            System.out.println(":inSum? " + inSum(a,b,c,d, n) + ";inIntersect?"+inIntersect(a,b,c,d, n)+";inSymDiff?"+inSymDiff(a,b,c,d, n));
+            System.out.print(":inSum? ");
+            System.out.printf("%5b",inSum(a,b,c,d, n));
+            System.out.print(";inIntersect? ");
+            System.out.printf("%5b",inIntersect(a,b,c,d, n));
+            System.out.print(";inSymDiff? ");
+            System.out.printf("%5b",inSymDiff(a,b,c,d,n));
+            System.out.println();
         }
 
 
