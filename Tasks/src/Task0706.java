@@ -6,6 +6,7 @@ public class Task0706 {
         int n;
         System.out.println("Please enter your input: ");
         n = sc.nextInt();
+        sc.close();
         if (n <= 0){
             System.out.println("Wrong input! Error");
         }
