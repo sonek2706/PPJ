@@ -34,6 +34,12 @@ public class Task0707 {
             int height = max(a,b,c);
             System.out.println(height);
 
+            for (int i = height; i > 0 ; i--){
+                System.out.print((i <= a)?"*":" ");
+                System.out.print((i <= b)?"*":" ");
+                System.out.println((i <= c)?"*":" ");
+            }
+
 //            for (int i = 0; i < height; i++){
 //                if (a <= height - i - 1)
 //                    System.out.print(" ");
@@ -53,12 +59,6 @@ public class Task0707 {
 //
 //                System.out.println();
 //            }
-
-            for (int i = height; i > 0 ; i--){
-                System.out.print((i <= a)?"*":" ");
-                System.out.print((i <= b)?"*":" ");
-                System.out.println((i <= c)?"*":" ");
-            }
         }
     }
 }
