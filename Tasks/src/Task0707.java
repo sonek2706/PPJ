@@ -11,10 +11,10 @@ public class Task0707 {
                 res = c;
         }
         else{
-           if (b > c)
-               res = b;
-           else
-               res = c;
+            if (b > c)
+                res = b;
+            else
+                res = c;
         }
 
         return res;
@@ -33,35 +33,32 @@ public class Task0707 {
         else{
             int height = max(a,b,c);
             System.out.println(height);
-            int x = height - a, y = height - b, z = height - c;
 
-            for (int j = height; j > 0; j--){
-                String line = "";
-                if (x > 0) {
-                    line += " ";
-                    x -= 1;
-                }
-                else
-                    line += "*";
+//            for (int i = 0; i < height; i++){
+//                if (a <= height - i - 1)
+//                    System.out.print(" ");
+//                else
+//                    System.out.print("*");
+//
+//                if (b <= height - i - 1)
+//                    System.out.print(" ");
+//                else
+//                    System.out.print("*");
+//
+//                if (c <= height - i - 1)
+//                    System.out.print(" ");
+//                else
+//                    System.out.print("*");
+//
+//
+//                System.out.println();
+//            }
 
-                if (y > 0) {
-                    line += " ";
-                    y -= 1;
-                }
-                else
-                    line += "*";
-
-                if (z > 0) {
-                    line += " ";
-                    z -= 1;
-                }
-                else
-                    line += "*";
-
-
-                System.out.println(line);
+            for (int i = height; i > 0 ; i--){
+                System.out.print((i <= a)?"*":" ");
+                System.out.print((i <= b)?"*":" ");
+                System.out.println((i <= c)?"*":" ");
             }
-
         }
     }
 }
