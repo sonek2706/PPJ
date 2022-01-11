@@ -1,4 +1,4 @@
-public class Task0805 {
+public class    Task0805 {
 
     public static void main(String[] args){
 
